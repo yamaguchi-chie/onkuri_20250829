@@ -3,15 +3,36 @@
 .top-about {
     background-color: $main-green;
 
+    .top-about__inner {
+        height: inherit;
+        position: relative;
+        &::before {
+            content: '';
+            background: transparent url(../images/common/top-about4.webp) no-repeat center center / cover;
+            position: absolute;
+            top: -210px;
+            right: 25px;
+            width: 100%;
+            max-width: 157px;
+            aspect-ratio: 157/128;
+            z-index: 2;
+        }
+    }
+
     .top-card {
         display: flex;
         align-items: center;
-        gap: 72px;
+        justify-content: space-between;
         .top-card__img {
             width: 50%;
         }
         .top-card__contents {
-            width: calc(100% - 50% - 72px);
+            width: calc(50% + 72px);
+        }
+    }
+    .top-card:nth-of-type(1) {
+        .top-card__contents {
+            padding-left: 72px;
         }
     }
 }
