@@ -3,48 +3,48 @@ $startFrom: pc;
 
 // デフォルト値を設定
 $mediaquerys: (
-  sm: "screen",
-  md: "screen",
-  lg: "screen",
+  sp: "screen",
+  tb: "screen",
+  pc: "screen",
   xl: "screen",
 );
 
 @if $startFrom == sp {
   //スマホファースト
   $breakpoints: (
-    sm: 600,
-    md: 768,
-    lg: 1024,
+    sp: 540,
+    tb: 840,
+    pc: 1100,
     xl: 1440,
   );
 
   //メディアクエリー
   $mediaquerys: (
-    sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
-    md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
-    lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+    sp: "screen and (min-width: #{map-get($breakpoints,'sp')}px)",
+    tb: "screen and (min-width: #{map-get($breakpoints,'tb')}px)",
+    pc: "screen and (min-width: #{map-get($breakpoints,'pc')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
   );
 
 } @else {
   $breakpoints: (
     xl: 1440,
-    lg: 1023,
-    md: 767,
-    sm: 600,
+    pc: 1099,
+    tb: 839,
+    sp: 540,
   );
   $mediaquerys: (
-    sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
-    md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
-    lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+    sp: "screen and (max-width: #{map-get($breakpoints,'sp')}px)",
+    tb: "screen and (max-width: #{map-get($breakpoints,'tb')}px)",
+    pc: "screen and (max-width: #{map-get($breakpoints,'pc')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
   );
 
 
 }
 
-// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
-@mixin mq($mediaquery: md) {
+// @include mq(){}で書くとブレークポイントが反映される（初期値はtb）
+@mixin mq($mediaquery: tb) {
   @media #{map-get($mediaquerys, $mediaquery)} {
     @content;
   }
@@ -55,14 +55,14 @@ $mediaquerys: (
   //pcで表示
   .u-desktop {
     display: none;
-    @include mq("md") {
+    @include mq("tb") {
       display: block;
     }
   }
 
   //モバイルのみ表示
   .u-mobile {
-    @include mq("md") {
+    @include mq("tb") {
       display: none;
     }
   }
@@ -70,7 +70,7 @@ $mediaquerys: (
   //pcで表示
   .u-desktop {
     display: block;
-    @include mq("md") {
+    @include mq("tb") {
       display: none;
     }
   }
@@ -78,7 +78,7 @@ $mediaquerys: (
   //モバイルのみ表示
   .u-mobile {
     display: none;
-    @include mq("md") {
+    @include mq("tb") {
       display: block;
     }
   }
