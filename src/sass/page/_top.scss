@@ -15,3 +15,13 @@
         }
     }
 }
+
+.topics {
+    .topics__inner.inner {
+        max-width: 850px;
+    }
+    .topics__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+}
