@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.top-about {
+    background-color: $main-green;
+
+    .top-card {
+        display: flex;
+        align-items: center;
+        gap: 72px;
+        .top-card__img {
+            width: 50%;
+        }
+        .top-card__contents {
+            width: calc(100% - 50% - 72px);
+        }
+    }
+}
