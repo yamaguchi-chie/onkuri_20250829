@@ -11,6 +11,8 @@
 .fs-14 {font-size: 14px;}
 .fs-13 {font-size: 13px;}
 
+.lp-50 {letter-spacing: 0.05em;}
+
 /*-----------------------------
 見出し
 ------------------------------*/
@@ -306,6 +308,57 @@ SP-navi
     }
   }
 } //sp
+
+
+/*------------------------------------------
+fv
+-------------------------------------------*/
+.fv {
+  margin-top: 70px;
+  border-radius: 10px;
+  width: calc(1380 / 1440 * 100%);
+  margin-inline: auto;
+  aspect-ratio: 1380/679;
+  position: relative;
+  background: transparent url(../images/common/top.webp) no-repeat center center / cover;
+  @include mq() {
+    margin-top: 60px;
+  }
+  @include mq(sp) {
+    margin-top: 55px;
+  }
+}
+.fv--consul {
+  background-image: url(../images/common/consul.webp);
+}
+.fv--corporation {
+  background-image: url(../images/common/corporation.webp);
+}
+.fv--about {
+  background-image: url(../images/common/about.webp);
+}
+.fv__title {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  position: absolute;
+  top: calc(140 / 679 * 100%);
+  // left: 30px;
+  left: calc(195 / 1380 * 100%);
+}
+.fv__wrap {
+  height: fit-content;
+  writing-mode: vertical-rl;
+  font-size: 40px;
+  font-weight: $bold;
+  line-height: 1.3;
+  letter-spacing: 0.3em;
+  color: $main-green;
+  background-color: $white;
+  padding: 8px;
+  border-radius: 8px;
+}
+
 
 
 /*------------------------------------------
