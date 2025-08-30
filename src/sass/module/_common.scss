@@ -12,10 +12,12 @@
 .fw-sb { font-weight: 600!important; }
 .fw-b { font-weight: 700!important; }
 
+.fs-26 {font-size: 26px;}
 .fs-45 {font-size: 45px;}
 .fs-40 {font-size: 40px;}
-.fs-32 {font-size: 32px;}
+.fs-34 {font-size: 34px;}
 .fz-17 {font-size: 17px;}
+.fs-15 {font-size: 15px;}
 .fs-14 {font-size: 14px;}
 .fs-13 {font-size: 13px;}
 
@@ -29,9 +31,11 @@
 
 //余白
 .mt-8 {margin-top: 8px;}
+.mt-16 {margin-top: 16px;}
 .mt-24 {margin-top: 24px;}
 .mt-32 {margin-top: 32px;}
 .mt-56 {margin-top: 56px;}
+.mt-72 {margin-top: 72px;}
 .mt-150 {margin-top: 150px;}
 .pb-130 {padding-block: 130px;}
 
@@ -131,6 +135,51 @@ button
       right: 13px;
       width: 5px;
       height: 8px;
+  }
+}
+.btn--white {
+    color: $white;
+  &::before {
+    background-color: $white;
+  }
+  &::after {
+    background-image: url(../images/common/arrow-green.webp);
+  }
+}
+
+/*--------------------------------
+緑のボタン
+----------------------------------*/
+.cta-wrap {
+  max-width: 350px;
+  margin-inline: auto;
+}
+.cta-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $main-green;
+  padding: 20px;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    text-align: center;
+    color: $white;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    position: relative;
+    padding-left: calc(12px + 18px);
+  &::before {
+      content: '';
+      background: transparent url(../images/common/ico-mail-white.webp) no-repeat center center / cover;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      left: 0;
+    }
   }
 }
 .btn--white {
@@ -434,6 +483,53 @@ fv
     }
 }
 
+
+/*------------------------------------------
+参加方法
+-------------------------------------------*/
+.cta__inner {
+  display: flex;
+  // gap: 130px;
+  gap: calc(130 / 1100 * 100%);
+}
+.label {
+  &:not(:last-of-type) .label__number::after {
+    content: '';
+    width: 1px;
+    height: 44px;
+    background-color: $green-gray;
+    position: absolute;
+    bottom: 0;
+    left: 19px;
+  }
+  .label__contents {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    padding-bottom: calc(16px + 44px);
+
+    .label__number {
+      color: $main-green;
+      letter-spacing: 0.07em;
+    }
+  }
+
+  .label__note {
+    padding-left: calc(32px + 42.16px);
+  }
+}
+//法人ページ 02
+.label--p0 {
+  .label__number {
+    &:not(:last-of-type)::after {
+      bottom: calc(-16px + -44px);
+    }
+  }
+  .label__contents {
+    padding-bottom: 0;
+  }
+}
 
 
 /*------------------------------------------
