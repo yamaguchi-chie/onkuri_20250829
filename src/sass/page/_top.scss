@@ -10,10 +10,10 @@
             content: '';
             background: transparent url(../images/common/top-about4.webp) no-repeat center center / cover;
             position: absolute;
-            top: -210px;
-            right: 25px;
+            top: rem(-210);
+            right: rem(25);
             width: 100%;
-            max-width: 157px;
+            max-width: rem(157);
             aspect-ratio: 157/128;
             z-index: 2;
         }
@@ -27,19 +27,19 @@
             width: 50%;
         }
         .top-card__contents {
-            width: calc(50% + 72px);
+            width: calc(50% + rem(72));
         }
     }
     .top-card:nth-of-type(1) {
         .top-card__contents {
-            padding-left: 72px;
+            padding-left: rem(72);
         }
     }
 }
 
 .topics {
     .topics__inner.inner {
-        max-width: 850px;
+        max-width: rem(850);
     }
     .topics__inner {
         display: flex;

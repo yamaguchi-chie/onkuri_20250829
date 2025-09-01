@@ -12,14 +12,14 @@
 .fw-sb { font-weight: 600!important; }
 .fw-b { font-weight: 700!important; }
 
-.fs-26 {font-size: 26px;}
-.fs-45 {font-size: 45px;}
-.fs-40 {font-size: 40px;}
-.fs-34 {font-size: 34px;}
-.fz-17 {font-size: 17px;}
-.fs-15 {font-size: 15px;}
-.fs-14 {font-size: 14px;}
-.fs-13 {font-size: 13px;}
+.fs-26 {font-size: rem(26);}
+.fs-45 {font-size: rem(45);}
+.fs-40 {font-size: rem(40);}
+.fs-34 {font-size: rem(34);}
+.fz-17 {font-size: rem(17);}
+.fs-15 {font-size: rem(15);}
+.fs-14 {font-size: rem(14);}
+.fs-13 {font-size: rem(13);}
 
 //游ゴシック
 .ff-sec {font-family: $second-font-family;}
@@ -30,18 +30,18 @@
 .lp-50 {letter-spacing: 0.05em;}
 
 //余白
-.mt-8 {margin-top: 8px;}
-.mt-16 {margin-top: 16px;}
-.mt-24 {margin-top: 24px;}
-.mt-32 {margin-top: 32px;}
-.mt-56 {margin-top: 56px;}
-.mt-72 {margin-top: 72px;}
-.mt-150 {margin-top: 150px;}
-.pb-130 {padding-block: 130px;}
+.mt-8 {margin-top: rem(8);}
+.mt-16 {margin-top: rem(16);}
+.mt-24 {margin-top: rem(24);}
+.mt-32 {margin-top: rem(32);}
+.mt-56 {margin-top: rem(56);}
+.mt-72 {margin-top: rem(72);}
+.mt-150 {margin-top: rem(150);}
+.pb-130 {padding-block: rem(130);}
 
 //角丸
-.br-10 {border-radius: 10px;}
-.br-15 {border-radius: 15px;}
+.br-10 {border-radius: rem(10);}
+.br-15 {border-radius: rem(15);}
 
 //反転
 .flex-d {flex-direction: row-reverse}
@@ -55,15 +55,15 @@
     font-family: $third-font-family;
     color: $main-gray;
     position: relative;
-    padding-left: calc(12px + 60px);
-    font-size: 12px;
+    padding-left: calc(rem(12) + rem(60));
+    font-size: rem(12);
     line-height: 1.25;
-    margin-bottom: 24px;
+    margin-bottom: rem(24);
   }
   .sec-title__en::before {
     content: '';
-    width: 60px;
-    height: 1px;
+    width: rem(60);
+    height: rem(1);
     position: absolute;
     top: 50%;
     left: 0;
@@ -71,7 +71,7 @@
     background-color: $main-gray;
   }
   .sec-title__ja {
-    font-size: 32px;
+    font-size: rem(32);
     font-weight: $semi-bold;
     letter-spacing: 0.05em;
   }
@@ -87,17 +87,17 @@
 }
 
 .page-title {
-  font-size: 45px;
+  font-size: rem(45);
   font-weight: $semi-bold;
   line-height: 1.8;
   letter-spacing: 0.05em;
-  padding-bottom: 32px;
+  padding-bottom: rem(32);
   position: relative;
   &::before {
     content: '';
     background-color: $main-green;
-    height: 1px;
-    width: 43px;
+    height: rem(1);
+    width: rem(43);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -113,9 +113,9 @@ button
   display: inline-block;
   position: relative;
   cursor: pointer;
-  font-size: 16px;
+  font-size: rem(16);
   font-weight: $semi-bold;
-  padding-right: calc(12px + 30px);
+  padding-right: calc(rem(12) + rem(30));
   &::before,
   &::after {
       content: '';
@@ -124,17 +124,17 @@ button
       transform: translateY(-50%);
   }
   &::before {
-      width: 31px;
-      height: 31px;
+      width: rem(31);
+      height: rem(31);
       border-radius: 50%;
       background-color: $main-green;
       right: 0;
   }
   &::after {
       background: transparent url(../images/common/arrow-white.webp) no-repeat center center / cover;
-      right: 13px;
-      width: 5px;
-      height: 8px;
+      right: rem(13);
+      width: rem(5);
+      height: rem(8);
   }
 }
 .btn--white {
@@ -151,7 +151,7 @@ button
 緑のボタン
 ----------------------------------*/
 .cta-wrap {
-  max-width: 350px;
+  max-width: rem(350);
   margin-inline: auto;
 }
 .cta-btn {
@@ -160,24 +160,24 @@ button
   flex-direction: column;
   align-items: center;
   background-color: $main-green;
-  padding: 20px;
+  padding: rem(20);
   cursor: pointer;
   span {
     display: inline-block;
     text-align: center;
     color: $white;
-    font-size: 16px;
+    font-size: rem(16);
     font-weight: $semi-bold;
     position: relative;
-    padding-left: calc(12px + 18px);
+    padding-left: calc(rem(12) + rem(18));
   &::before {
       content: '';
       background: transparent url(../images/common/ico-mail-white.webp) no-repeat center center / cover;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 18px;
-      height: 18px;
+      width: rem(18);
+      height: rem(18);
       left: 0;
     }
   }
@@ -204,41 +204,41 @@ head
   top: 0;
   left: 0;
   z-index: 10;
-  height: 70px;
+  height: rem(70);
   width: 100%;
-  // padding: 0 43px 0 60px;
+  // padding: 0 rem(43) 0 rem(60);
 }
 .header-inner {
   height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1320px;
+  max-width: rem(1320);
   margin-inline: auto;
-  padding: 0 20px;
+  padding: 0 rem(20);
 }
 .site-logo {
-    max-width: 166px;
+    max-width: rem(166);
 }
 
 @include mq(tb) {
 
   .site-header {
-    padding: 0 10px;
-    height: 60px;
+    padding: 0 rem(10);
+    height: rem(60);
   }
   .site-logo {
-    max-width: 140px;
+    max-width: rem(140);
   }
 }
 
 @include mq(sp) {
 
   .site-header {
-    height: 55px;
+    height: rem(55);
   }
   .site-logo {
-    max-width: 120px;
+    max-width: rem(120);
   }
 }
 
@@ -252,7 +252,7 @@ PC NAV
 #nav ul {
   height: inherit;
   display: flex;
-  gap: 35px;
+  gap: rem(35);
   align-items: center;
 }
 
@@ -266,7 +266,7 @@ PC NAV
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 14px;
+  font-size: rem(14);
   font-weight: $bold;
   line-height: 2.1;
   transition: .5s;
@@ -310,17 +310,17 @@ SP-navi
 
   #menu_btn {
     position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 55px;
-    height: 55px;
+    top: rem(0);
+    right: rem(0);
+    width: rem(55);
+    height: rem(55);
     z-index: 9999;
     cursor: pointer;
     transition: .3s;
   }
   .menu-trigger {
-    width: 24px;
-    height: 17px;
+    width: rem(24);
+    height: rem(17);
     position: relative;
     top: 50%;
     left: 50%;
@@ -331,7 +331,7 @@ SP-navi
     display: block;
     position: absolute;
     width: 100%;
-    height: 1.5px;
+    height: rem(1.5);
     background-color: $main-gray;
     transition: all .3s;
   }
@@ -379,7 +379,7 @@ SP-navi
   #sp_nav .sp_nav_inner {
     width: 100%;
     height: 100%;
-    padding: 70px 50px 20px;
+    padding: rem(70) rem(50) rem(20);
     overflow: auto;
   }
 
@@ -393,9 +393,9 @@ SP-navi
       a {
         position: relative;
         display: block;
-        font-size: 16px;
+        font-size: rem(16);
         font-weight: $bold;
-        padding: 15px 0;
+        padding: rem(15) 0;
         transition: all .3s;
         // cursor: pointer;
         &:hover {
@@ -411,16 +411,16 @@ SP-navi
 fv
 -------------------------------------------*/
 .fv {
-  margin-top: 70px;
-  border-radius: 10px;
+  margin-top: rem(70);
+  border-radius: rem(10);
   aspect-ratio: 1380/679;
   position: relative;
   background: transparent url(../images/common/top.webp) no-repeat center center / cover;
   @include mq() {
-    margin-top: 60px;
+    margin-top: rem(60);
   }
   @include mq(sp) {
-    margin-top: 55px;
+    margin-top: rem(55);
   }
 }
 .fv--consul {
@@ -435,23 +435,23 @@ fv
 .fv__title {
   display: flex;
   flex-direction: row-reverse;
-  gap: 8px;
+  gap: rem(8);
   position: absolute;
   top: calc(140 / 679 * 100%);
-  // left: 30px;
+  // left: rem(30);
   left: calc(195 / 1380 * 100%);
 }
 .fv__wrap {
   height: fit-content;
   writing-mode: vertical-rl;
-  font-size: 40px;
+  font-size: rem(40);
   font-weight: $bold;
   line-height: 1.3;
   letter-spacing: 0.3em;
   color: $main-green;
   background-color: $white;
-  padding: 8px;
-  border-radius: 8px;
+  padding: rem(8);
+  border-radius: rem(8);
 }
 
 
@@ -462,21 +462,21 @@ fv
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 56px;
-    row-gap: 32px;
+    column-gap: rem(56);
+    row-gap: rem(32);
     .box {
-        // width:  calc(33.3% - calc(56px * 2 / 3));
-        width: 329px;
+        // width:  calc(33.3% - calc(rem(56) * 2 / 3));
+        width: rem(329);
         background-color: $white;
-        padding: 72px 27px 50px;
+        padding: rem(72) rem(27) rem(50);
         display: flex;
         flex-direction: column;
         align-items: center;
         .box__img {
-            max-width: 112px;
+            max-width: rem(112);
         }
         .box__title {
-            font-size: 20px;
+            font-size: rem(20);
             font-weight: $semi-bold;
             line-height: 1.95;
         }
@@ -489,25 +489,25 @@ fv
 -------------------------------------------*/
 .cta__inner {
   display: flex;
-  // gap: 130px;
+  // gap: rem(130);
   gap: calc(130 / 1100 * 100%);
 }
 .label {
   &:not(:last-of-type) .label__number::after {
     content: '';
-    width: 1px;
-    height: 44px;
+    width: rem(1);
+    height: rem(44);
     background-color: $green-gray;
     position: absolute;
     bottom: 0;
-    left: 19px;
+    left: rem(19);
   }
   .label__contents {
     display: flex;
-    gap: 32px;
+    gap: rem(32);
     align-items: center;
     position: relative;
-    padding-bottom: calc(16px + 44px);
+    padding-bottom: calc(rem(16) + rem(44));
 
     .label__number {
       color: $main-green;
@@ -516,14 +516,14 @@ fv
   }
 
   .label__note {
-    padding-left: calc(32px + 42.16px);
+    padding-left: calc(rem(32) + rem(42.16));
   }
 }
 //法人ページ 02
 .label--p0 {
   .label__number {
     &:not(:last-of-type)::after {
-      bottom: calc(-16px + -44px);
+      bottom: calc(rem(-16) + rem(-44));
     }
   }
   .label__contents {
@@ -540,10 +540,10 @@ footer {
 }
 
 .footer-flex {
-  padding: 88px 0 64px;
+  padding: rem(88) 0 rem(64);
   background-color: $main-green;
   color: $white;
-  border-radius: 15px 15px 0 0;
+  border-radius: rem(15) rem(15) 0 0;
 }
 
 .f-top {
@@ -553,21 +553,21 @@ footer {
 
   .f-left {
     .f-logo {
-        max-width: 166px;
+        max-width: rem(166);
     }
     .f-sns {
-        margin-top: 22px;
+        margin-top: rem(22);
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: rem(6);
         .f-sns-ico {
             border-radius: 50%;
-            width: 28px;
-            height: 28px;
+            width: rem(28);
+            height: rem(28);
             position: relative;
             img {
-              width: 12px;
-              height: 12px;
+              width: rem(12);
+              height: rem(12);
               position: absolute;
               top: 50%;
               left: 50%;
@@ -587,26 +587,26 @@ footer {
     align-items: end;
     justify-content: space-between;
       .f-left-bottom {
-        margin-top: 45px;
+        margin-top: rem(45);
         .f-adress {
-            font-size: 14px;
+            font-size: rem(14);
             font-weight: $medium;
             letter-spacing: 0.03em;
-            margin-bottom: 27px;
+            margin-bottom: rem(27);
         }
         .f-text {
-            padding-left: calc(9px + 18px);
+            padding-left: calc(rem(9) + rem(18));
             position: relative;
-            font-size: 15px;
+            font-size: rem(15);
             font-weight: $medium;
             line-height: 1.7;
             span {
-                font-size: 13px;
+                font-size: rem(13);
             }
             &::before {
             content: '';
-            width: 18px;
-            height: 17px;
+            width: rem(18);
+            height: rem(17);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -617,7 +617,7 @@ footer {
         }
         }
         .f-text + .f-text {
-          margin-top: 18px;
+          margin-top: rem(18);
         }
         .f-text:nth-of-type(1)::before {
           background-image: url(../images/common/ico-tel.webp);
@@ -637,7 +637,7 @@ footer {
 
 
 footer .copy {
-  font-size: 12px;
+  font-size: rem(12);
   line-height: 1.4;
   text-align: right;
 }
