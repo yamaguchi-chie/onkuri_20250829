@@ -36,6 +36,7 @@
 .mt-32 {margin-top: rem(32);}
 .mt-56 {margin-top: rem(56);}
 .mt-72 {margin-top: rem(72);}
+.mt-100 {margin-top: rem(100);}
 .mt-150 {margin-top: rem(150);}
 .pb-130 {padding-block: rem(130);}
 
@@ -465,8 +466,8 @@ fv
     column-gap: rem(56);
     row-gap: rem(32);
     .box {
-        // width:  calc(33.3% - calc(rem(56) * 2 / 3));
-        width: rem(329);
+        width:  calc(33.3% - calc(rem(56) * 2 / 3));
+        // width: rem(329);
         background-color: $white;
         padding: rem(72) rem(27) rem(50);
         display: flex;

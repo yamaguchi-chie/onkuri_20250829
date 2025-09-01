@@ -3,3 +3,24 @@
 .corporation-support {
     background-color: $main-green;
 }
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    column-gap: rem(56);
+    .feature {
+        width:  calc(33.3% - calc(rem(56) * 2 / 3));
+        .feature__number {
+            color: $main-green;
+            font-size: rem(23);
+            letter-spacing: 0.04em;
+            line-height: 1;
+        }
+        .feature__img {
+            // max-width: rem(329);
+        }
+        .feature__text {
+            line-height: 2;
+        }
+    }
+}
