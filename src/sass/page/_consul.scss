@@ -3,3 +3,16 @@
 .consul-support {
     background-color: $main-green;
 }
+
+.consul-about {
+    margin-top: rem(91);
+    .consul-about__img {
+        max-width: rem(650);
+        margin-inline: auto;
+    }
+    .consul-about__text-wrap {
+        max-width: rem(955);
+        margin-inline: auto;
+        line-height: calc(38 / 17);
+    }
+}
