@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+
+/*------------------------------------------
+概要
+-------------------------------------------*/
+.overview__inner {
+  display: flex;
+  gap: calc(130 / 1150 * 100%);
+  .overview-label-list {
+    width: calc(rem(779) / rem(1150) * 100%);
+    .overview-label {
+      border-bottom: 1px solid $border-gray;
+      display: flex;
+      gap: rem(10);
+      padding: rem(32) rem(8);
+      line-height: 2;
+      .overview-label__left {
+      width: rem(81);
+      }
+      .overview-label__right {
+          width: calc(100% - rem(81) - rem(10));
+      }
+    }
+    .overview-label:first-of-type {
+      padding-top: 0;
+    }
+  }
+}

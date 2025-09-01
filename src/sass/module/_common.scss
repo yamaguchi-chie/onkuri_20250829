@@ -490,8 +490,7 @@ fv
 -------------------------------------------*/
 .cta__inner {
   display: flex;
-  // gap: rem(130);
-  gap: calc(130 / 1100 * 100%);
+  gap: calc(130 / 1150 * 100%);
 }
 .label {
   &:not(:last-of-type) .label__number::after {
