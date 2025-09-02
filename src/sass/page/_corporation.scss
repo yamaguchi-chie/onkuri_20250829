@@ -4,7 +4,39 @@
     background-color: $main-green;
 }
 
+.purpose {
+    .purpose__inner.inner {
+        max-width: rem(1250);
+        padding-left: calc(25px + rem(50));
+    }
+
+    .purpose__body {
+        display: flex;
+        gap: rem(72);
+
+
+        .purpose__text {
+            max-width: rem(603);
+            line-height: calc(34 / 17);
+        }
+
+        .purpose__img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(56);
+            width: calc(100% - calc(rem(603) / rem(1150) * 100%));
+            img:nth-of-type(2) {
+                max-width: rem(405);
+                padding-right: 2%;
+            }
+        }
+    }
+}
+
+
 .feature-list {
+    max-width: rem(1100);
     display: flex;
     justify-content: center;
     column-gap: rem(56);
