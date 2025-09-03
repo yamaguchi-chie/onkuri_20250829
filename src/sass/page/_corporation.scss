@@ -8,16 +8,24 @@
     .purpose__inner.inner {
         max-width: rem(1250);
         padding-left: calc(25px + rem(50));
+        @include mq() {
+            padding-left: 20px;
+        }
     }
 
     .purpose__body {
         display: flex;
         gap: rem(72);
-
+        @include mq() {
+            flex-direction: column-reverse;
+        }
 
         .purpose__text {
             max-width: rem(603);
             line-height: calc(34 / 17);
+            @include mq() {
+                max-width: initial;
+            }
         }
 
         .purpose__img {
@@ -26,9 +34,25 @@
             align-items: center;
             gap: rem(56);
             width: calc(100% - calc(rem(603) / rem(1150) * 100%));
+            @include mq() {
+                flex-direction: row;
+                align-items: end;
+                gap: rem(40);
+                width: 100%;
+            }
+            img:nth-of-type(1) {
+                @include mq() {
+                    width: calc(50% - calc(rem(40) / 2));
+                }
+            }
             img:nth-of-type(2) {
                 max-width: rem(405);
                 padding-right: 2%;
+                @include mq() {
+                    // width: calc(100% - calc(50% - calc(rem(40) / 2)));
+                    width: 46%;
+                    padding-right: 0;
+                }
             }
         }
     }
@@ -40,8 +64,16 @@
     display: flex;
     justify-content: center;
     column-gap: rem(56);
+    @include mq() {
+        flex-wrap: wrap;
+        column-gap: rem(48);
+        row-gap: rem(32);
+    }
     .feature {
         width:  calc(33.3% - calc(rem(56) * 2 / 3));
+        @include mq() {
+            width: rem(300);
+        }
         .feature__number {
             color: $main-green;
             font-size: rem(23);
@@ -49,7 +81,6 @@
             line-height: 1;
         }
         .feature__img {
-            // max-width: rem(329);
         }
         .feature__text {
             line-height: 2;

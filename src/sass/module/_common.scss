@@ -21,6 +21,10 @@
 .fs-14 {font-size: rem(14);}
 .fs-13 {font-size: rem(13);}
 
+@include mq() {
+  .fs-26 {font-size: rem(24);}
+}
+
 //游ゴシック
 .ff-sec {font-family: $second-font-family;}
 
@@ -45,7 +49,10 @@
 .mt-150 {margin-top: rem(150);}
 .pb-130 {padding-block: rem(130);}
 @include mq() {
+  .mt-32 {margin-top: rem(24);}
   .mt-56 {margin-top: rem(40);}
+  .mt-72 {margin-top: rem(56);}
+  .mt-100 {margin-top: rem(88);}
   .mt-150 {margin-top: rem(130);}
   .pb-130 {padding-block: rem(110);}
 }
@@ -494,12 +501,15 @@ fv
     row-gap: rem(32);
     .box {
         width:  calc(33.3% - calc(rem(56) * 2 / 3));
-        // width: rem(329);
         background-color: $white;
         padding: rem(72) rem(27) rem(50);
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include mq() {
+          width: rem(320);
+          padding: rem(64) rem(18) rem(48);
+        }
         .box__img {
             max-width: rem(112);
         }
@@ -518,6 +528,10 @@ fv
 .cta__inner {
   display: flex;
   gap: calc(130 / 1150 * 100%);
+  @include mq() {
+    flex-direction: column;
+    gap: rem(48);
+  }
 }
 .label {
   &:not(:last-of-type) .label__number::after {
@@ -528,6 +542,9 @@ fv
     position: absolute;
     bottom: 0;
     left: rem(19);
+    @include mq() {
+      height: rem(41);
+    }
   }
   .label__contents {
     display: flex;
@@ -535,6 +552,9 @@ fv
     align-items: center;
     position: relative;
     padding-bottom: calc(rem(16) + rem(44));
+    @include mq() {
+      padding-bottom: calc(rem(13) + rem(36));
+    }
 
     .label__number {
       color: $main-green;
@@ -551,10 +571,17 @@ fv
   .label__number {
     &:not(:last-of-type)::after {
       bottom: calc(rem(-16) + rem(-44));
+      @include mq() {
+      bottom: calc(rem(-13) + rem(-41));
+        
+      }
     }
   }
   .label__contents {
     padding-bottom: 0;
+    @include mq() {
+      padding-bottom: 0;
+    }
   }
 }
 
