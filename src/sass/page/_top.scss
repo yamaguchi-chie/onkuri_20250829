@@ -2,6 +2,9 @@
 
 .concept {
     margin-bottom: rem(106);
+    @include mq() {
+        margin-bottom: rem(80);
+    }
 
     .concept__inner.inner {
         max-width: rem(1250);
@@ -9,20 +12,41 @@
         .concept__body {
             display: flex;
             justify-content: space-between;
+            @include mq() {
+                flex-direction: column;
+                align-items: center;
+            }
             .concept__left {
                 max-width: rem(297);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                @include mq() {
+                    flex-direction: row;
+                    align-items: end;
+                    max-width: initial;
+                }
+                img:nth-of-type(1) {
+                    @include mq() {
+                        width: 40%;
+                    }
+                }
                 img:nth-of-type(2) {
                     padding-left: rem(50);
                     max-width: rem(267);
+                    height: 100%;
+                    @include mq() {
+                        transform: translateY(rem(30));
+                    }
                 }
             }
             .concept__contents {
                 padding-top: rem(70);
                 padding-bottom: rem(118);
                 max-width: rem(380);
+                @include mq() {
+                    padding-bottom: rem(30);
+                }
                 .cencept__title {
                     text-align: center;
                 }
@@ -30,6 +54,9 @@
                     max-width: rem(364);
                     margin-inline: auto;
                     line-height: calc(38 / 17);
+                    @include mq() {
+                        max-width: rem(400);
+                    }
                 }
                 .concept__btn {
                     text-align: center;
@@ -39,6 +66,12 @@
                 padding-top: rem(140);
                 max-width: rem(261);
                 padding-left: rem(36);
+                @include mq() {
+                    padding-top: rem(0);
+                    padding-left: 0;
+                    max-width: rem(200);
+                    margin-right: auto;
+                }
             }
         }
     }
@@ -78,6 +111,9 @@
     .top-card:nth-of-type(1) {
         .top-card__contents {
             padding-left: rem(72);
+            @include mq() {
+                
+            }
         }
     }
 }

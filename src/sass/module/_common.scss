@@ -44,6 +44,11 @@
 .mt-130 {margin-top: rem(130);}
 .mt-150 {margin-top: rem(150);}
 .pb-130 {padding-block: rem(130);}
+@include mq() {
+  .mt-56 {margin-top: rem(40);}
+  .mt-150 {margin-top: rem(130);}
+  .pb-130 {padding-block: rem(110);}
+}
 
 //角丸
 .br-10 {border-radius: rem(10);}
@@ -80,6 +85,9 @@
     font-size: rem(32);
     font-weight: $semi-bold;
     letter-spacing: 0.05em;
+    @include mq() {
+      font-size: rem(28);
+    }
   }
 }
 .sec-title--white {
@@ -100,6 +108,9 @@
   padding-bottom: rem(32);
   position: relative;
   display: inline-block;
+  @include mq() {
+    font-size: rem(38);
+  }
   &::before {
     content: '';
     background-color: $main-green;
@@ -312,16 +323,14 @@ footer #nav ul li a:hover {
 SP-navi
 ---------------------------*/
 
-// @media screen and (min-width: (tb)) {
-  .zdo_drawer_menu {
-    display: none;
-    @include mq(sp) {
-      display: block;
-    }
+.zdo_drawer_menu {
+  display: none;
+  @include mq() {
+    display: block;
   }
-// }
+  }
 
-@include mq(sp) {
+@include mq() {
 
   #menu_btn {
     position: absolute;
@@ -433,6 +442,7 @@ fv
   background: transparent url(../images/common/top.webp) no-repeat center center / cover;
   @include mq() {
     margin-top: rem(60);
+    aspect-ratio: 1380/830;
   }
   @include mq(sp) {
     margin-top: rem(55);
@@ -467,6 +477,9 @@ fv
   background-color: $white;
   padding: rem(8);
   border-radius: rem(8);
+  @include mq() {
+    font-size: rem(32);
+  }
 }
 
 
@@ -551,6 +564,11 @@ footer
 -------------------------------------------*/
 footer {
   width: 100%;
+  .f-inner.inner {
+    @include mq() {
+      padding: 0 rem(48);
+    }
+  }
 }
 
 .footer-flex {
@@ -563,6 +581,10 @@ footer {
 .f-top {
   display: flex;
   justify-content: space-between;
+  @include mq() {
+    flex-direction: column;
+    gap: rem(24);
+  }
 }
 
   .f-left {
