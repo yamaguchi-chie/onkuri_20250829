@@ -6,9 +6,16 @@
     column-gap: rem(56);
     row-gap: rem(40);
     max-width: rem(570);
+    @include mq(sp) {
+        column-gap: rem(32);
+        row-gap: rem(24);
+    }
 
     li {
         width: calc(50% - rem(56) / 2);
+        @include mq(sp) {
+            width: calc(50% - rem(32) / 2);
+        }
     }
 
     .topics-cards__img {
@@ -27,6 +34,9 @@
             font-size: rem(20);
             line-height: 1.45;
             font-weight: $medium;
+            @include mq(sp) {
+                font-size: rem(18);
+            }
         }
     }
 

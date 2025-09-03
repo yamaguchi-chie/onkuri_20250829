@@ -93,7 +93,10 @@
     font-weight: $semi-bold;
     letter-spacing: 0.05em;
     @include mq() {
-      font-size: rem(28);
+      font-size: rem(24);
+    }
+    @include mq(sp) {
+      font-size: rem(20);
     }
   }
 }
@@ -116,7 +119,10 @@
   position: relative;
   display: inline-block;
   @include mq() {
-    font-size: rem(38);
+    font-size: rem(36);
+  }
+  @include mq(sp) {
+    font-size: rem(24);
   }
   &::before {
     content: '';
@@ -287,6 +293,11 @@ PC NAV
   display: flex;
   gap: rem(35);
   align-items: center;
+  @include mq(sp) {
+    flex-wrap: wrap;
+    column-gap: rem(35);
+    row-gap: rem(14);
+  }
 }
 
 #nav ul li {
@@ -449,7 +460,8 @@ fv
   background: transparent url(../images/common/top.webp) no-repeat center center / cover;
   @include mq() {
     margin-top: rem(60);
-    aspect-ratio: 1380/830;
+    aspect-ratio: 370/450;
+
   }
   @include mq(sp) {
     margin-top: rem(55);
@@ -457,12 +469,18 @@ fv
 }
 .fv--consul {
   background-image: url(../images/common/consul.webp);
+    @include mq() {
+    background-position: 79% center;
+  }
 }
 .fv--corporation {
   background-image: url(../images/common/corporation.webp);
 }
 .fv--about {
   background-image: url(../images/common/about.webp);
+  @include mq() {
+    background-position: 58% center;
+  }
 }
 .fv__title {
   display: flex;
@@ -470,8 +488,13 @@ fv
   gap: rem(8);
   position: absolute;
   top: calc(140 / 679 * 100%);
-  // left: rem(30);
   left: calc(195 / 1380 * 100%);
+  @include mq() {
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(80 / 840 * 100%);
+}
+
 }
 .fv__wrap {
   height: fit-content;
@@ -485,7 +508,10 @@ fv
   padding: rem(8);
   border-radius: rem(8);
   @include mq() {
-    font-size: rem(32);
+    font-size: rem(36);
+  }
+  @include mq(sp) {
+    font-size: rem(24);
   }
 }
 
@@ -593,7 +619,7 @@ footer {
   width: 100%;
   .f-inner.inner {
     @include mq() {
-      padding: 0 rem(48);
+      padding: 0 rem(20);
     }
   }
 }
@@ -649,6 +675,10 @@ footer {
     display: flex;
     align-items: end;
     justify-content: space-between;
+    @include mq(sp) {
+      flex-wrap: wrap;
+      gap: rem(48);
+    }
       .f-left-bottom {
         margin-top: rem(45);
         .f-adress {
