@@ -9,6 +9,9 @@
     .consul-about__img {
         max-width: rem(650);
         margin-inline: auto;
+        @include mq() {
+            max-width: rem(600);
+        }
     }
     .consul-about__text-wrap {
         max-width: rem(955);
