@@ -292,10 +292,10 @@ head
 /*----------------------------
 PC NAV
 ---------------------------*/
-#nav {
+.nav {
   height: inherit;
 }
-#nav ul {
+.nav ul {
   height: inherit;
   display: flex;
   gap: rem(35);
@@ -307,12 +307,12 @@ PC NAV
   }
 }
 
-#nav ul li {
+.nav ul li {
   height: inherit;
   position: relative;
 }
 
-#nav ul li a {
+.nav ul li a {
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -322,23 +322,23 @@ PC NAV
   line-height: 2.1;
   transition: .5s;
 }
-#nav ul li:last-of-type a {
+.nav ul li:last-of-type a {
   padding-right: 0;
 }
-#nav ul li a:hover {
+.nav ul li a:hover {
   color: $main-green;
 }
 
-footer #nav ul li a:hover {
+footer .nav ul li a:hover {
   opacity: 0.6;
   color: $white;
 }
 
 @include mq(tb) {
- #nav {
+ .nav {
     display: none;
   }
-  footer #nav {
+  footer .nav {
     display: block;
   }
 }
@@ -628,6 +628,7 @@ fv
 
   .label__note {
     padding-left: calc(rem(32) + rem(42.16));
+    line-height: calc(26 / 15);
   }
 }
 //法人ページ 02
@@ -680,6 +681,7 @@ footer {
 
   .f-left {
     .f-logo {
+        display: block;
         max-width: rem(166);
     }
     .f-sns {
@@ -782,6 +784,7 @@ footer {
 
 footer .copy {
   font-size: rem(12);
+  font-weight: $medium;
   line-height: 1.4;
   text-align: right;
 }

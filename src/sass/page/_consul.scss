@@ -17,5 +17,8 @@
         max-width: rem(955);
         margin-inline: auto;
         line-height: calc(38 / 17);
+        .consul-about__text:nth-of-type(2) {
+            font-size: rem(16);
+        }
     }
 }
