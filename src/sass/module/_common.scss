@@ -453,6 +453,36 @@ SP-navi
       }
     }
   }
+  #sp_nav .sp_nav_sns {
+        margin-top: rem(16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(12);
+        .sp_nav_sns-ico {
+            border-radius: 50%;
+            width: rem(40);
+            height: rem(40);
+            position: relative;
+            &:hover {
+              opacity: 0.7;
+            }
+            img {
+              width: rem(20);
+              height: rem(20);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+        }
+        .sp_nav_sns-ico:nth-of-type(1) {
+            background-color: $black;
+          }
+          .sp_nav_sns-ico:nth-of-type(2) {
+            border: rem(1) solid $border-gray;
+        }
+    }
 } //sp
 
 
@@ -662,6 +692,9 @@ footer {
             width: rem(28);
             height: rem(28);
             position: relative;
+            &:hover {
+              opacity: 0.7;
+            }
             img {
               width: rem(12);
               height: rem(12);
