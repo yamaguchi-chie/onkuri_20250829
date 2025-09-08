@@ -30,7 +30,7 @@
         font-size: rem(22);
         line-height: calc(44 / 22);
         @include mq(sp) {
-          font-size: rem(18);
+          font-size: rem(20);
         }
         span {
           color: $main-green;

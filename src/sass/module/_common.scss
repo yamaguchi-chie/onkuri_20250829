@@ -12,18 +12,19 @@
 .fw-sb { font-weight: 600!important; }
 .fw-b { font-weight: 700!important; }
 
-.fs-26 {font-size: rem(26);}
-.fs-45 {font-size: rem(45);}
-.fs-40 {font-size: rem(40);}
-.fs-34 {font-size: rem(34);}
-.fs-17 {font-size: rem(17);}
-.fs-15 {font-size: rem(15);}
-.fs-14 {font-size: rem(14);}
 .fs-13 {font-size: rem(13);}
+.fs-14 {font-size: rem(14);}
+.fs-15 {font-size: rem(15);}
+.fs-17 {font-size: rem(17);}
+.fs-26 {font-size: rem(26);}
+.fs-34 {font-size: rem(34);}
+.fs-40 {font-size: rem(40);}
+.fs-45 {font-size: rem(45);}
 
 @include mq() {
   .fs-17 {font-size: rem(16);}
-  .fs-26 {font-size: rem(24);}
+  .fs-26 {font-size: rem(20);}
+  .fs-34 {font-size: rem(26);}
 }
 
 //游ゴシック
@@ -99,10 +100,10 @@
     font-weight: $semi-bold;
     letter-spacing: 0.05em;
     @include mq() {
-      font-size: rem(24);
+      font-size: rem(26);
     }
     @include mq(sp) {
-      font-size: rem(22);
+      font-size: rem(24);
     }
   }
 }
@@ -128,7 +129,7 @@
     font-size: rem(36);
   }
   @include mq(sp) {
-    font-size: rem(24);
+    font-size: rem(30);
   }
   &::before {
     content: '';
@@ -514,10 +515,10 @@ fv
   padding: rem(8);
   border-radius: rem(8);
   @include mq() {
-    font-size: rem(36);
+    font-size: rem(34);
   }
   @include mq(sp) {
-    font-size: rem(24);
+    font-size: rem(26);
   }
 }
 
@@ -585,6 +586,7 @@ fv
     position: relative;
     padding-bottom: calc(rem(16) + rem(44));
     @include mq() {
+      gap: rem(20);
       padding-bottom: calc(rem(13) + rem(36));
     }
 
@@ -693,6 +695,13 @@ footer {
             letter-spacing: 0.03em;
             margin-bottom: rem(27);
         }
+        a.f-text {
+          display: block;
+          transition: all .3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
         .f-text {
             padding-left: calc(rem(9) + rem(18));
             position: relative;
@@ -717,6 +726,9 @@ footer {
         }
         .f-text + .f-text {
           margin-top: rem(18);
+          @include mq() {
+            margin-top: rem(8);
+          }
         }
         .f-text:nth-of-type(1)::before {
           background-image: url(../images/common/ico-tel.webp);
